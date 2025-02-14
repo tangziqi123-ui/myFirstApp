@@ -38,10 +38,10 @@ st.set_page_config(
 
 # 标题,居中
 st.markdown(
-    "<h1 style='text-align: center;'> <span style='color: green;'>Prediction System for </span><span style='color: red;'>Obstructive Sleep Apnea（OSA）Severity</span></h1",
+    "<h2 style='text-align: center;'> <span style='color: green;'>Prediction System for </span><span style='color: red;'>Obstructive Sleep Apnea（OSA）Severity</span></h2",
     unsafe_allow_html=True)
 st.markdown(
-    "<h1 style='text-align: center; color: green;'>In Chronic Kidney Disease（CKD） Patients</h1",
+    "<h2 style='text-align: center; color: green;'>In Chronic Kidney Disease（CKD） Patients</h2",
     unsafe_allow_html=True)
 
 st.markdown("<h1 style='text-align: center; color: green;'></h1>", unsafe_allow_html=True)
