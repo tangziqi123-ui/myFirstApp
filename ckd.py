@@ -54,14 +54,14 @@ with left:
         A = 2
     else:
         A = 3
-    Q = st.number_input('Apnea-Hypopnea Index（events/hour）', max_value=5, min_value=0)
+    Q = st.number_input('Apnea-Hypopnea Index（events/hour）', max_value=999, min_value=0)
     O = st.number_input('Slowest Pulse Rate(bpm)', max_value=999, min_value=0)
-    E = st.number_input('Age（years）', max_value=200, min_value=0)
+    E = st.number_input('Age（year）', max_value=200, min_value=0)
     U = st.number_input('Body Mass Index（kg/m²）', max_value=999.00, min_value=0.00)
-    P = st.selectbox('Body Type', ['Normal or Thinness', 'Overweightness', 'Obesity'])
-    if P == 'Normal or Thinness':
+    P = st.selectbox('Weight Status', ['Underweight or Healthy Weight', 'Overweight', 'Obesity'])
+    if P == 'Underweight or Healthy Weight':
         P = 0
-    elif P == 'Overweightness':
+    elif P == 'Overweight':
         P = 1
     elif P == 'Obesity':
         P = 2
@@ -80,23 +80,23 @@ with left:
         C = 0
     else:
         C = 1
-    F = st.number_input('Hemoglobin(g/L)', max_value=999, min_value=0)
-    G = st.number_input('Lymphocytes(×10⁹/L)', max_value=999, min_value=0)
-    H = st.number_input('Platelet Count(×10⁹/L)', max_value=999, min_value=0)
+    F = st.number_input('Hemoglobin(g/L)', max_value=999.00, min_value=0.00)
+    G = st.number_input('Lymphocyte(×10⁹/L)', max_value=999.00, min_value=0.00)
+    H = st.number_input('Platelet Count(×10⁹/L)', max_value=999.00, min_value=0.00)
     R = st.number_input('Serum Albumin(g/L)', max_value=999.00, min_value=0.00)
 with right:
     S = st.number_input('Alkaline Phosphatase(U/L)', max_value=999.00, min_value=0.00)
-    T = st.number_input('Parathyroid Hormone(pmol/L)', max_value=999, min_value=0)
-    V = st.number_input('Cystatin C(mg/L)', max_value=999, min_value=0.00)
-    W = st.number_input('Blood Creatinine(umol/L)', max_value=999, min_value=0)
-    X = st.number_input('Blood Urea Nitrogen(mmol/L)', max_value=999, min_value=0)
-    Y = st.number_input('β2-Microglobulin(mg/L)', max_value=999, min_value=0)
-    M = st.number_input('Total Cholesterol（mmol/L）', max_value=999, min_value=0)
-    N = st.number_input('Low-Density Lipoprotein Cholesterol（mmol/L）', max_value=999, min_value=0)
-    I = st.number_input('Blood Potassium（mmol/L）', max_value=999, min_value=0)
-    J = st.number_input('Blood Phosphorus（mmol/L）', max_value=999, min_value=0)
-    K = st.number_input('Calcium-Phosphorus Product(mmol²/L²)', max_value=999, min_value=0)
-    L = st.number_input('Blood Magnesium（mmol/L）', max_value=999, min_value=0)
+    T = st.number_input('Parathyroid Hormone(pmol/L)', max_value=999.00, min_value=0.00)
+    V = st.number_input('Cystatin C(mg/L)', max_value=999.00, min_value=0.00)
+    W = st.number_input('Serum Creatinine(umol/L)', max_value=999.00, min_value=0.00)
+    X = st.number_input('Blood Urea Nitrogen(mmol/L)', max_value=999.00, min_value=0.00)
+    Y = st.number_input('β2-Microglobulin(mg/L)', max_value=999.00, min_value=0.00)
+    M = st.number_input('Total Cholesterol（mmol/L）', max_value=999.00, min_value=0.00)
+    N = st.number_input('Low-Density Lipoprotein Cholesterol（mmol/L）', max_value=999.00, min_value=0.00)
+    I = st.number_input('Serum Potassium（mmol/L）', max_value=999.00, min_value=0.00)
+    J = st.number_input('Serum Phosphorus（mmol/L）', max_value=999.00, min_value=0.00)
+    K = st.number_input('Calcium-Phosphorus Product(mmol²/L²)', max_value=999.00, min_value=0.00)
+    L = st.number_input('Serum Magnesium（mmol/L）', max_value=999.00, min_value=0.00)
 
 st.markdown("<p style='text-align: center; color: green;'></p>", unsafe_allow_html=True)
 
