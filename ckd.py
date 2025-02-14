@@ -54,10 +54,10 @@ with left:
         A = 2
     else:
         A = 3
-    Q = st.number_input('Apnea-Hypopnea Index（events/hour）', max_value=999, min_value=0)
+    Q = st.number_input('Apnea-Hypopnea Index(events/hour)', max_value=999.0, min_value=0.0)
     O = st.number_input('Slowest Pulse Rate(bpm)', max_value=999, min_value=0)
-    E = st.number_input('Age（year）', max_value=200, min_value=0)
-    U = st.number_input('Body Mass Index（kg/m²）', max_value=999.00, min_value=0.00)
+    E = st.number_input('Age(year)', max_value=200, min_value=0)
+    U = st.number_input('Body Mass Index(kg/m²)', max_value=999.00, min_value=0.00)
     P = st.selectbox('Weight Status', ['Underweight or Healthy Weight', 'Overweight', 'Obesity'])
     if P == 'Underweight or Healthy Weight':
         P = 0
@@ -91,12 +91,12 @@ with right:
     W = st.number_input('Serum Creatinine(umol/L)', max_value=999.00, min_value=0.00)
     X = st.number_input('Blood Urea Nitrogen(mmol/L)', max_value=999.00, min_value=0.00)
     Y = st.number_input('β2-Microglobulin(mg/L)', max_value=999.00, min_value=0.00)
-    M = st.number_input('Total Cholesterol（mmol/L）', max_value=999.00, min_value=0.00)
-    N = st.number_input('Low-Density Lipoprotein Cholesterol（mmol/L）', max_value=999.00, min_value=0.00)
-    I = st.number_input('Serum Potassium（mmol/L）', max_value=999.00, min_value=0.00)
-    J = st.number_input('Serum Phosphorus（mmol/L）', max_value=999.00, min_value=0.00)
+    M = st.number_input('Total Cholesterol(mmol/L)', max_value=999.00, min_value=0.00)
+    N = st.number_input('Low-Density Lipoprotein Cholesterol(mmol/L)', max_value=999.00, min_value=0.00)
+    I = st.number_input('Serum Potassium(mmol/L)', max_value=999.00, min_value=0.00)
+    J = st.number_input('Serum Phosphorus(mmol/L)', max_value=999.00, min_value=0.00)
     K = st.number_input('Calcium-Phosphorus Product(mmol²/L²)', max_value=999.00, min_value=0.00)
-    L = st.number_input('Serum Magnesium（mmol/L）', max_value=999.00, min_value=0.00)
+    L = st.number_input('Serum Magnesium(mmol/L)', max_value=999.00, min_value=0.00)
 
 st.markdown("<p style='text-align: center; color: green;'></p>", unsafe_allow_html=True)
 
