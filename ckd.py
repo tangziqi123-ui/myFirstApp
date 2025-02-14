@@ -136,4 +136,6 @@ if st.button('CKD Stage Predict Outcomes'):
 
     # 在 Streamlit 中显示
     st.table(styled_df)
+    if st.button('About'):
+        st.write('This system is a model validation and testing system. It is not for clinical application without permission.')
 
