@@ -50,7 +50,7 @@ left, right = st.columns(2)
 with left:
     B = st.selectbox('CKD Stage', ['Stage 1', 'Stage  2', 'Stage 3', 'Stage 4', 'Stage 5'])
     B = int(B.replace('Stage ', ''))
-    C = st.number_input('Body Mass Index（kg/m²）', max_value=9999.00, min_value=0.00)
+    C = st.number_input('Body Mass Index（kg/m²）', max_value=999.00, min_value=0.00)
     A = st.selectbox('Body Type', ['Normal or Thinness', 'Overweightness', 'Obesity'])
     if A == 'Normal or Thinness':
         A = 0
@@ -75,12 +75,12 @@ with left:
         J = 1
 
 with right:
-    H = st.number_input('White Blood Cell(×10⁹/L)', max_value=9999.00, min_value=0.00)
-    I = st.number_input('Neutrophils(×10⁹/L)', max_value=9999.00, min_value=0.00)
-    G = st.number_input('Blood Creatinine(umol/L)', max_value=9999.00, min_value=0.00)
-    D = st.number_input('Cystatin C(mg/L)', max_value=9999.00, min_value=0.00, )
-    E = st.number_input('Glomerular Filtration Rate（mL/min/1.73m²）', max_value=9999.00, min_value=0.00)
-    F = st.number_input('Total Carbon Dioxide in Blood（mmol/L）', max_value=9999.00, min_value=0.00)
+    H = st.number_input('White Blood Cell(×10⁹/L)', max_value=999.00, min_value=0.00)
+    I = st.number_input('Neutrophils(×10⁹/L)', max_value=999.00, min_value=0.00)
+    G = st.number_input('Blood Creatinine(umol/L)', max_value=999.00, min_value=0.00)
+    D = st.number_input('Cystatin C(mg/L)', max_value=999.00, min_value=0.00, )
+    E = st.number_input('Glomerular Filtration Rate（mL/min/1.73m²）', max_value=999.00, min_value=0.00)
+    F = st.number_input('Total Carbon Dioxide in Blood（mmol/L）', max_value=999.00, min_value=0.00)
 
 st.markdown("<p style='text-align: center; color: green;'></p>", unsafe_allow_html=True)
 
