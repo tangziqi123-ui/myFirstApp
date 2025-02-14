@@ -55,9 +55,9 @@ with left:
     else:
         A = 3
     Q = st.number_input('Apnea-Hypopnea Index（events/hour）', max_value=5, min_value=0)
-    O = st.number_input('Slowest Pulse Rate(bpm)', max_value=100, min_value=60)
+    O = st.number_input('Slowest Pulse Rate(bpm)', max_value=999, min_value=0)
     E = st.number_input('Age（years）', max_value=200, min_value=0)
-    U = st.number_input('Body Mass Index（kg/m²）', max_value=9999.00, min_value=0.00)
+    U = st.number_input('Body Mass Index（kg/m²）', max_value=999.00, min_value=0.00)
     P = st.selectbox('Body Type', ['Normal or Thinness', 'Overweightness', 'Obesity'])
     if P == 'Normal or Thinness':
         P = 0
@@ -80,23 +80,23 @@ with left:
         C = 0
     else:
         C = 1
-    F = st.number_input('Hemoglobin(g/L)', max_value=150, min_value=110)
-    G = st.number_input('Lymphocytes(×10⁹/L)', max_value=0.6, min_value=0.1)
-    H = st.number_input('Platelet Count(×10⁹/L)', max_value=350, min_value=125)
-    R = st.number_input('Serum Albumin(g/L)', max_value=9999.00, min_value=0.00)
+    F = st.number_input('Hemoglobin(g/L)', max_value=999, min_value=0)
+    G = st.number_input('Lymphocytes(×10⁹/L)', max_value=999, min_value=0)
+    H = st.number_input('Platelet Count(×10⁹/L)', max_value=999, min_value=0)
+    R = st.number_input('Serum Albumin(g/L)', max_value=999.00, min_value=0.00)
 with right:
-    S = st.number_input('Alkaline Phosphatase(U/L)', max_value=9999.00, min_value=0.00)
-    T = st.number_input('Parathyroid Hormone(pmol/L)', max_value=55, min_value=40)
-    V = st.number_input('Cystatin C(mg/L)', max_value=1.03, min_value=0.00)
-    W = st.number_input('Blood Creatinine(umol/L)', max_value=81, min_value=41)
-    X = st.number_input('Blood Urea Nitrogen(mmol/L)', max_value=8.8, min_value=3.1)
-    Y = st.number_input('β2-Microglobulin(mg/L)', max_value=3.0, min_value=1.3)
-    M = st.number_input('Total Cholesterol（mmol/L）', max_value=5.18, min_value=2.80)
-    N = st.number_input('Low-Density Lipoprotein Cholesterol（mmol/L）', max_value=3.37, min_value=2.00)
-    I = st.number_input('Blood Potassium（mmol/L）', max_value=5.3, min_value=3.5)
-    J = st.number_input('Blood Phosphorus（mmol/L）', max_value=1.51, min_value=0.85)
-    K = st.number_input('Calcium-Phosphorus Product(mmol²/L²)', max_value=30.00, min_value=0.00)
-    L = st.number_input('Blood Magnesium（mmol/L）', max_value=1.02, min_value=0.75)
+    S = st.number_input('Alkaline Phosphatase(U/L)', max_value=999.00, min_value=0.00)
+    T = st.number_input('Parathyroid Hormone(pmol/L)', max_value=999, min_value=0)
+    V = st.number_input('Cystatin C(mg/L)', max_value=999, min_value=0.00)
+    W = st.number_input('Blood Creatinine(umol/L)', max_value=999, min_value=0)
+    X = st.number_input('Blood Urea Nitrogen(mmol/L)', max_value=999, min_value=0)
+    Y = st.number_input('β2-Microglobulin(mg/L)', max_value=999, min_value=0)
+    M = st.number_input('Total Cholesterol（mmol/L）', max_value=999, min_value=0)
+    N = st.number_input('Low-Density Lipoprotein Cholesterol（mmol/L）', max_value=999, min_value=0)
+    I = st.number_input('Blood Potassium（mmol/L）', max_value=999, min_value=0)
+    J = st.number_input('Blood Phosphorus（mmol/L）', max_value=999, min_value=0)
+    K = st.number_input('Calcium-Phosphorus Product(mmol²/L²)', max_value=999, min_value=0)
+    L = st.number_input('Blood Magnesium（mmol/L）', max_value=999, min_value=0)
 
 st.markdown("<p style='text-align: center; color: green;'></p>", unsafe_allow_html=True)
 
@@ -136,6 +136,6 @@ if st.button('CKD Stage Predict Outcomes'):
 
     # 在 Streamlit 中显示
     st.table(styled_df)
-if st.button('About'):
+if st.button('Notice'):
     st.write('**This system is a model validation and testing system. It is not for clinical application without permission.**')
 
