@@ -51,10 +51,10 @@ with left:
     B = st.selectbox('CKD Stage', ['Stage 1', 'Stage  2', 'Stage 3', 'Stage 4', 'Stage 5'])
     B = int(B.replace('Stage ', ''))
     C = st.number_input('Body Mass Index（kg/m²）', max_value=999.00, min_value=0.00)
-    A = st.selectbox('Body Type', ['Normal or Thinness', 'Overweightness', 'Obesity'])
-    if A == 'Normal or Thinness':
+    A = st.selectbox('Weight Status', ['Underweight or Healthy Weight', 'Overweight', 'Obesity'])
+    if A == 'Underweight or Healthy Weight':
         A = 0
-    elif A == 'Overweightness':
+    elif A == 'Overweight':
         A = 1
     elif A == 'Obesity':
         A = 2
@@ -68,17 +68,17 @@ with left:
         L = 0
     else:
         L = 1
-    J = st.selectbox('Alcohol Consumption History', ['No', 'Yes'])
+    J = st.selectbox('Alcohol Consumption', ['No', 'Yes'])
     if J == 'No':
         J = 0
     else:
         J = 1
 
 with right:
-    H = st.number_input('White Blood Cell(×10⁹/L)', max_value=999.00, min_value=0.00)
-    I = st.number_input('Neutrophils(×10⁹/L)', max_value=999.00, min_value=0.00)
-    G = st.number_input('Blood Creatinine(umol/L)', max_value=999.00, min_value=0.00)
-    D = st.number_input('Cystatin C(mg/L)', max_value=999.00, min_value=0.00, )
+    H = st.number_input('White Blood Cell (×10⁹/L)', max_value=999.00, min_value=0.00)
+    I = st.number_input('Neutrophils (×10⁹/L)', max_value=999.00, min_value=0.00)
+    G = st.number_input('Serum creatinine (umol/L)', max_value=9999.00, min_value=0.00)
+    D = st.number_input('Cystatin C (mg/L)', max_value=999.00, min_value=0.00, )
     E = st.number_input('Glomerular Filtration Rate（mL/min/1.73m²）', max_value=999.00, min_value=0.00)
     F = st.number_input('Total Carbon Dioxide in Blood（mmol/L）', max_value=999.00, min_value=0.00)
 
