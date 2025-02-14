@@ -75,12 +75,12 @@ with left:
         J = 1
 
 with right:
-    H = st.number_input('White Blood Cell(×10⁹/L)', max_value=9.5, min_value=3.5)
-    I = st.number_input('Neutrophils(×10⁹/L)', max_value=6.3, min_value=1.8)
-    G = st.number_input('Blood Creatinine(umol/L)', max_value=81, min_value=41)
-    D = st.number_input('Cystatin C(mg/L)', max_value=1.03, min_value=0.00, )
-    E = st.number_input('Glomerular Filtration Rate（mL/min/1.73m²）', max_value=9999.00, min_value=90.00)
-    F = st.number_input('Total Carbon Dioxide in Blood（mmol/L）', max_value=30, min_value=20)
+    H = st.number_input('White Blood Cell(×10⁹/L)', max_value=9999.00, min_value=0.00)
+    I = st.number_input('Neutrophils(×10⁹/L)', max_value=9999.00, min_value=0.00)
+    G = st.number_input('Blood Creatinine(umol/L)', max_value=9999.00, min_value=0.00)
+    D = st.number_input('Cystatin C(mg/L)', max_value=9999.00, min_value=0.00, )
+    E = st.number_input('Glomerular Filtration Rate（mL/min/1.73m²）', max_value=9999.00, min_value=0.00)
+    F = st.number_input('Total Carbon Dioxide in Blood（mmol/L）', max_value=9999.00, min_value=0.00)
 
 st.markdown("<p style='text-align: center; color: green;'></p>", unsafe_allow_html=True)
 
@@ -115,5 +115,5 @@ if st.button('OSA Severity Predict Outcomes'):
     styled_df = df.style.apply(highlight_max_row, axis=1)
     # 在 Streamlit 中显示
     st.table(styled_df)
-if st.button('About'):
+if st.button('Notice'):
     st.write('**This system is a model validation and testing system. It is not for clinical application without permission.**')
