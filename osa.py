@@ -75,7 +75,7 @@ with left:
         J = 1
 
 with right:
-    H = st.number_input('White Blood Cell (×10⁹/L)', max_value=999.00, min_value=0.00)
+    H = st.number_input('White Blood Cell count (×10⁹/L)', max_value=999.00, min_value=0.00)
     I = st.number_input('Neutrophils (×10⁹/L)', max_value=999.00, min_value=0.00)
     G = st.number_input('Serum creatinine (umol/L)', max_value=9999.00, min_value=0.00)
     D = st.number_input('Cystatin C (mg/L)', max_value=999.00, min_value=0.00, )
