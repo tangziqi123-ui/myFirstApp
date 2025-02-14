@@ -113,7 +113,6 @@ if st.button('OSA Severity Predict Outcomes'):
         return ['background-color: #FF9999' if row.name == max_row_idx else '' for _ in row]
     # 应用样式
     styled_df = df.style.apply(highlight_max_row, axis=1)
-
     # 在 Streamlit 中显示
     st.table(styled_df)
 if st.button('About'):
