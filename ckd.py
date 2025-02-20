@@ -111,9 +111,6 @@ if st.button('CKD Stage Predict Outcomes'):
     print(y_pred)
     print(y_prob)
 
-    res_value = 'Stage: ' + str(y_pred[0])
-    res_proba = 'Probability: ' + str(y_prob[0])
-
     df = pd.DataFrame(y_prob[0]).reset_index()
     df.columns = ['Stage', 'Probability']
     map_result = {0: 'Stage 1', 1: 'Stage 2', 2: 'Stage 3', 3: 'Stage 4', 4: 'Stage 5'}
