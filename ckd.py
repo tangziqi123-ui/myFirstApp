@@ -116,9 +116,21 @@ if st.button('CKD Stage Predict Outcomes'):
 
     df = pd.DataFrame(y_prob[0]).reset_index()
     df.columns = ['Stage', 'Probability']
-    map_result = {0: 'Stage 1-2', 1: 'Stage 1-2', 2: 'Stage 3-5', 3: 'Stage 3-5', 4: 'Stage 3-5'}
+    map_result = {0: 'Stage 1', 1: 'Stage 2', 2: 'Stage 3', 3: 'Stage 4', 4: 'Stage 5'}
     df['Stage'] = df['Stage'].apply(lambda xx: map_result[xx])
-    df['Probability'] = df['Probability'].apply(lambda xx: str(round(xx * 100, 2)) + '%')
+    df['Probability'] = df['Probability'].astype(float)
+    stage_1_2_prob = df[df['Stage'].isin(['Stage 1', 'Stage 2'])]['Probability'].sum()
+    stage_1_2 = 'Stage 1-2'
+    stage_3_5_prob = df[df['Stage'].isin(['Stage 3', 'Stage 4', 'Stage 5'])]['Probability'].sum()
+    stage_3_5 = 'Stage 3-5'
+    combined_df = pd.DataFrame({
+        'Stage': [stage_1_2, stage_3_5],
+        'Probability': [stage_1_2_prob, stage_3_5_prob]
+    })
+    combined_df['Probability'] = combined_df['Probability'].apply(lambda xx: str(round(xx * 100, 2)) + '%')
+
+    # 打印或展示最终结果
+    print(combined_df)
 
     df.index += 1
     # 选择要高亮的列
