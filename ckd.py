@@ -131,6 +131,7 @@ if st.button('CKD Stage Predict Outcomes'):
 
     # 打印或展示最终结果
     print(combined_df)
+    st.write(combined_df)
 
     df.index += 1
     # 选择要高亮的列
