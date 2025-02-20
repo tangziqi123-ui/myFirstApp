@@ -123,6 +123,8 @@ if st.button('CKD Stage Predict Outcomes'):
     # 格式化概率为百分比
     df['Probability'] = df['Probability'].apply(lambda xx: str(round(xx * 100, 2)) + '%')
 
+    df.index += 1
+
     # 找到最大概率所在的行索引
     max_row_idx = df['Probability'].apply(lambda xx: float(xx.replace('%', ''))).idxmax()
 
