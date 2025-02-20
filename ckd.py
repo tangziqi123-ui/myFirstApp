@@ -134,7 +134,7 @@ if st.button('CKD Stage Predict Outcomes'):
     # 选择要高亮的列
     target_column = "Probability"  # 这里指定列名
     # 找到最大值所在的行索引
-    max_row_idx = df[target_column].apply(lambda xx: float(xx.replace('%', ''))).idxmax()
+    max_row_idx = df[target_column].astype(str).apply(lambda xx: float(xx.replace('%', ''))).idxmax()
 
     # 自定义样式函数
     def highlight_max_row(row):
