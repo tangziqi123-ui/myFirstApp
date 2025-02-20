@@ -116,7 +116,7 @@ if st.button('CKD Stage Predict Outcomes'):
 
     df = pd.DataFrame(y_prob[0]).reset_index()
     df.columns = ['Stage', 'Probability']
-    map_result = {0: 'Stage 1', 1: 'Stage 2', 2: 'Stage 3', 3: 'Stage 4', 4: 'Stage 5'}
+    map_result = {0: 'Stage 1-2', 1: 'Stage 1-2', 2: 'Stage 3-5', 3: 'Stage 3-5', 4: 'Stage 3-5'}
     df['Stage'] = df['Stage'].apply(lambda xx: map_result[xx])
     df['Probability'] = df['Probability'].apply(lambda xx: str(round(xx * 100, 2)) + '%')
 
